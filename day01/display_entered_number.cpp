@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main()
+{
+    int number = 0;
+
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+    std::cout << "You entered: " << number << "\n";
+    return 0;
+}
