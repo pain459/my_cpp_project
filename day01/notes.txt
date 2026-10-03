@@ -1,0 +1,33 @@
+Compile using the command
+
+clang++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o main
+
+| Part | Meaning |
+|---|---|
+| `clang++` | Runs the C++ compiler driver. |
+| `-std=c++17` | Selects C++17 language rules. |
+| `-Wall -Wextra` | Enables useful compiler warnings. |
+| `-pedantic` | Requests additional diagnostics about non-standard extensions. |
+| `main.cpp` | The source file to build. |
+| `-o main` | Names the resulting executable `main`. |
+
+Understand the program:
+
+#include <iostream>
+This includes the standard-library header that provides the input and output objects we will use, including std::cout and std::cin. For today, remember: we include <iostream> when using these tools to display output and read input.  
+
+int main()
+main is the entry function for the console programs we’ll write. The braces { and } enclose its body—the instructions belonging to that function.
+The int tells us that this function returns an integer. We’ll study functions more fully on Day 5; for now, keep this structure.  
+
+std::cout << "Hello, C++!\n";
+Read this as:
+Send the text “Hello, C++!” to the standard output.
+
+In our terminal session, that output appears on the screen. std::cout is the output object, and << inserts the following value into it.  
+The prefix std:: identifies a name in the standard-library namespace. Think of a namespace as a named group: std::cout identifies cout within std. We’ll keep writing that prefix explicitly.  
+The text is enclosed in double quotes. Inside it, \n represents a newline, so subsequent output starts on a new line. The quotation marks themselves are not part of the displayed text.  
+The semicolon ; ends this output statement. Do not assume every line needs a semicolon—notice that the #include line and the braces do not have one.  
+
+return 0;
+This ends main and returns an exit status of zero, conventionally indicating successful completion. It does not print 0 on the screen. Returning a value and displaying a value are different operations. 
